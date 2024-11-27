@@ -5,8 +5,18 @@
 {% block content %}
     <div class="features">
         <h1>News</h1>
+        {% if news %}
+            {% for val in news %}
+                <div class="alert alert-warning">
+                    <h3>{{ val.title }}</h3>
+                    <p>{{ val.announcement }}</p>
+                    <a href="{% url 'news-detail' val.id %}" class="btn btn-warning">Читати детальніше</a>
+                </div> 
+            {% endfor %}
+        {% else %}
+            <p>Немає новин!</p>
+        {% endif %}
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, sint?</p>
-        <button class="btn btn-warning">About us</button>
+        {# Коментарій #}
     </div>
 {% endblock %}
