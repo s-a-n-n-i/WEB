@@ -1,0 +1,26 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Форма добавлення статті{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Форма добавлення статті</h1>
+        
+        <form method="post">
+            {% csrf_token %}<br>
+            {{ form.title }}<br>
+            {{ form.announcement }}<br>
+            {{ form.full_text }}<br>
+            {{ form.date }}<br>
+            <span>{{ error }}</span>
+            
+            <!-- <input type="text" placeholder="Назва статті" class="form-control"><br>
+            <input type="text" placeholder="Анонс статті" class="form-control"><br>
+            <textarea class="form-control" placeholder="Текст статті"></textarea><br>
+            <input type="date" class="form-control"><br>
+            <input type="time" class="form-control"><br> -->
+
+            <button class="btn btn-success" type="submit">Додати статтю</button>
+        </form>
+    </div>
+{% endblock %}
