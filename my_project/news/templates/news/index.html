@@ -1,0 +1,26 @@
+{% extends 'news/layout.html' %}
+
+{% block title %}Main page{% endblock %}
+
+{% block content %}
+   <div class="features">
+      <h1>{{ title }}</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, aspernatur.</p>
+      <button class="btn btn-warning">Button</button>
+      {% for val in values %}
+         {% if val == 'Hello' %}
+            <!-- {% filter upper %}
+            <p>{{ val }}</p>
+            {% endfilter %} -->
+            <!-- Or -->
+            <p>{{ val|upper }}</p>
+         {% endif %}
+      {% endfor %}
+
+      {% for val in obj %}
+         <p>{{ val }}</p>
+      {% endfor %}
+
+      <!-- {{ obj.age }} -->
+   </div>
+{% endblock %}

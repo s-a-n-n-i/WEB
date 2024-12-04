@@ -1,0 +1,85 @@
+/* @import url('reset.css'); */
+@import url('news.css');
+
+
+body {
+    min-height: 100vh;
+    background: #6b6b6b;
+}
+
+aside {
+    float: left;
+    background: #3b3a3a;
+    width: 20%;
+    padding: 2.5%;
+    min-height: 100vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+}
+
+aside img {
+    width: 80px;
+    float: left;
+}
+
+aside .logo {
+    font-size: 40px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    top: 5px;
+}
+
+aside h3 {
+    margin-top: 50px;
+    font-size: 28px;
+}
+
+aside ul {
+    list-style: none;
+    
+}
+
+aside ul li {
+    color: #fff;
+    display: block;
+    margin-top: 20px;
+    transition: transform .6s ease;
+}
+
+aside a {
+    text-decoration: none;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: darkgoldenrod;
+    transform: scale(1.05);
+}
+
+main .features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    width: 75%;
+}
+
+main .features h1 {
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+main .features p {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+main .features .news {
+    width: 75%;
+}
+
+form {
+    width: 500px;
+}
